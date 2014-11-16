@@ -1,0 +1,37 @@
+#-------------------------------------------------------------
+# try turn on term with color
+#-------------------------------------------------------------
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+	export TERM='xterm-256color'
+else
+	export TERM='xterm'
+fi
+
+#-------------------------------------------------------------
+# shell options
+#-------------------------------------------------------------
+shopt -s checkjobs
+shopt -s dirspell
+
+#-------------------------------------------------------------
+# aliases
+#-------------------------------------------------------------
+alias ls='ls -h --color --group-directories-first'
+alias tree='tree -Csuh'
+
+#-------------------------------------------------------------
+# general utils
+#-------------------------------------------------------------
+gssh()    { $HOME/scripts/gssh.sh "$@"; } #Graeme ssh
+sshkeys() { $HOME/scripts/sshkeys.sh "$@"; }
+
+#-------------------------------------------------------------
+# C++
+#-------------------------------------------------------------
+export CCACHE_BASEDIR=/home/$USER/svn/
+export CCACHE_PREFIX=distcc
+export CCACHE_COMPRESS=yes
+export GTAGSGLOBAL=/usr/local/bin/global
+
+alias hcdistcc="$HOME/scripts/bjam_color.pl"
+alias stripit="strip47 --strip-unneeded"
