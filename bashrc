@@ -101,7 +101,7 @@ fi
 
 PS1="\n\[${Yellow}\]\t\[${NC}\] "							# time
 PS1=${PS1}"\[${SU}\]\u\[${NC}\]@\[${Red}\]\h\[${NS}\] "		# user@host
-PS1=${PS1}"\[${Cyan}\]\W\[${NS}\]"							# pwd
+PS1=${PS1}"\[${Cyan}\]\w\[${NS}\]"							# pwd
 PS1=${PS1}"\n\[${White}\]$ "								# cmd line
 
 export TIMEFORMAT=$'\nreal %3R\tuser %3U\tsys %3S\tpcpu %P\n'
